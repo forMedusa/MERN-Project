@@ -1,0 +1,23 @@
+.Profilecontainer{
+    margin-top: 5%;
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+.form-check{
+    text-align: left;
+}
+.btn-primary, .btn-success{
+    margin-right:2%
+}
+.head{
+    text-align: center;
+    margin-top: 2%;
+}
+.logoutbut{
+    color: white;
+    text-decoration: none;
+}
+.logoutbut :hover{
+    color: white;
+}
