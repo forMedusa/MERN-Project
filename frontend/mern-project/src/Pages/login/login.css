@@ -23,3 +23,18 @@
     color:white;
     text-decoration: none;
   }
+  @media only screen and (max-width: 768px){
+    .container{
+        display: list-item;
+    }
+    .signupImage{
+        width: 70%;
+    margin-left: 12%;
+    }
+    .signupForm{
+        margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    width: 80%;
+    }
+  }

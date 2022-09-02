@@ -23,7 +23,7 @@ export default function Login(){
     }
     const login=(e)=>{
         e.preventDefault();
-        axios.post('http://localhost:3000/login', user)
+        axios.post('https://mern-project-xyzsor.herokuapp.com/login', user)
         .then(res => {
             console.log(res.data);
             alert(res.data.message)
@@ -36,7 +36,9 @@ export default function Login(){
                 localStorage.setItem("ph",res.data.user.ph);
                 navigate("/Profile");
             }
-            });
+            }).catch(err => {
+                alert(err);
+            })
 
 
     }

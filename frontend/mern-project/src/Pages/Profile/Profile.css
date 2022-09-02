@@ -21,3 +21,15 @@
 .logoutbut :hover{
     color: white;
 }
+@media only screen and (max-width: 768px) {
+    .Profilecontainer{
+        margin-top: 5%;
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .Profiledata{
+        text-align: left;
+    }
+
+    }
