@@ -24,12 +24,12 @@ export default function Signup(){
     }
     const signup = (e) => {
         e.preventDefault();
-        const {name, email,pass,cpass,gender,age,ph,dob}= user
+        const {name, email,pass,cpass}= user
         if(name && email && pass &&(pass===cpass)){
             axios.post("http://localhost:3000/signup", user)
             .then(res => {
                 alert(res.data.message);
-                if(res.data.message=="Data Inserted in Database"){
+                if(res.data.message==="Data Inserted in Database"){
                     localStorage.setItem("email", user.email);
                 localStorage.setItem("name",res.data.user.name);
                 localStorage.setItem("gender",res.data.user.gender);
@@ -46,7 +46,7 @@ export default function Signup(){
     return(
         <div className="container">
             {/* {console.log("user", user)} */}
-                <img src="https://img.freepik.com/free-vector/sign-up-concept-illustration_114360-7875.jpg?w=360" alt="Signup Image" className="signupImage"/>
+                <img src="https://img.freepik.com/free-vector/sign-up-concept-illustration_114360-7875.jpg?w=360" alt="Signup" className="signupImage"/>
            
         <form className="signupForm">
                 <h3 className="signuphead">SignUp</h3>

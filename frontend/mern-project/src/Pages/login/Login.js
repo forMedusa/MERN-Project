@@ -27,7 +27,7 @@ export default function Login(){
         .then(res => {
             console.log(res.data);
             alert(res.data.message)
-            if(res.data.message=="Login Successful"){
+            if(res.data.message==="Login Successful"){
                 localStorage.setItem("email", user.email);
                 localStorage.setItem("name",res.data.user.name);
                 localStorage.setItem("gender",res.data.user.gender);
@@ -42,7 +42,7 @@ export default function Login(){
     }
     return(
         <div className="container">
-                <img src="https://img.freepik.com/free-vector/computer-login-concept-illustration_114360-7892.jpg?w=2000" alt="LogIn Image" className="signupImage"/>
+                <img src="https://img.freepik.com/free-vector/computer-login-concept-illustration_114360-7892.jpg?w=2000" alt="LogIn" className="signupImage"/>
            
         <form className="signupForm">
                 <h3 className="signuphead">LogIn</h3>

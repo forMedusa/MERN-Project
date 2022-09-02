@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../Profile/Profile.css';
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 export default function Login() {
     const [user, setUser]= useState({
@@ -37,7 +36,7 @@ export default function Login() {
         <div className="head"><h1>Profile</h1></div>
         <div className="Profilecontainer">
             
-            <img src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" width={100} />
+            <img src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" alt="profilePic" width={100} />
             <div className="Profiledata">
                 <form>
                     <div class="form-group row">
