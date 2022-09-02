@@ -50,7 +50,7 @@ const userSchema =  mongoose.Schema({
   const user = mongoose.model('User', userSchema);
 
   //POST API USER
-app.post('/', async (req, res) => { //
+app.post('/signup', async (req, res) => { //
      const {name, email, pass,age,ph,dob,gender}= req.body
     const data = new user({ //
         name: req.body.name,//
