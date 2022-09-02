@@ -32,13 +32,14 @@ export default function Signup(){
                 console.log(res);
                 alert(res.data.message);
                 if(res.data.message==="Data Inserted in Database"){
-                    localStorage.setItem("email", user.email);
+                    navigate("/Profile");
+                localStorage.setItem("email", user.email);
                 localStorage.setItem("name",res.data.user.name);
                 localStorage.setItem("gender",res.data.user.gender);
                 localStorage.setItem("age",res.data.user.age);
                 localStorage.setItem("dob",res.data.user.dob);
                 localStorage.setItem("ph",res.data.user.ph);
-                    navigate("/Profile");
+                    
                 }
             })
         } else{
