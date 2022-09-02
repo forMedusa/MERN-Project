@@ -3,6 +3,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "../signup/signup.css";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function Signup(){
     const [user, setUser]= useState({
         name:"",
@@ -73,7 +74,7 @@ export default function Signup(){
                 <div className="signupButton">
                 <button type="submit" className="btn btn-primary" onClick={ signup }>Register</button>
                 <p className="forgot-password text-right">
-                    Already registered <a href="/Login">log in?</a>
+                    Already registered <Link to="/Login">log in?</Link>
                 </p>
                 </div>
             </form>
