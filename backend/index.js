@@ -23,7 +23,7 @@ app.use(bodyparser.json());
 
 const port = process.env.PORT || 8080;
 // Database Connection
-const url=`mongodb://localhost:27017/mern-project`;
+const url=`mongodb+srv://Xyzsor:Smackthat%40369@cluster0.dm362or.mongodb.net/?retryWrites=true&w=majority`;
 //mongoose.connect(`mongodb://localhost:27017/college-project`);
 const client= new MongoClient(url);
 client.connect();
@@ -32,16 +32,8 @@ mongoose.connection.once('open', () => console.log("Successfully connected to Da
 .on('error', (error) => {
     console.log('Mongoose Connection Warning!', error);
 });
-// .then(() => {
-//   console.log('Connected to database');
-//   app.listen(port, () => {
-//     console.log(`Express server listening on port ${port}`);
-//   });
-// });
-// const user=require('./User/userQueries');
-// app.use('api/user',user);
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('server running');
 })
 
