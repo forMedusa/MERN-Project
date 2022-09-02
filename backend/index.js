@@ -1,7 +1,7 @@
 const express= require('express');
 const cors= require('cors');
 const bodyparser= require('body-parser');
-//const mysql= require('mysql2');
+require('dotenv').config();
 var objectId= require('mongodb').ObjectID;
 const mongoose=require('mongoose');
 const e = require('express');
@@ -21,7 +21,7 @@ app.use(function(req,res,next){
 app.use(cors());
 app.use(bodyparser.json());
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3001;
 // Database Connection
 const url=`mongodb+srv://Xyzsor:Smackthat%40369@cluster0.dm362or.mongodb.net/?retryWrites=true&w=majority`;
 //mongoose.connect(`mongodb://localhost:27017/college-project`);
@@ -50,7 +50,7 @@ const userSchema =  mongoose.Schema({
   const user = mongoose.model('User', userSchema);
 
   //POST API USER
-app.post('https://mern-project-xyzsor.herokuapp.com/signup', async (req, res) => { //
+app.post('/', async (req, res) => { //
      const {name, email, pass,age,ph,dob,gender}= req.body
     const data = new user({ //
         name: req.body.name,//
@@ -80,7 +80,8 @@ app.post('https://mern-project-xyzsor.herokuapp.com/signup', async (req, res) =>
 })//
 
 // API
-app.post('https://mern-project-xyzsor.herokuapp.com/login', async(req,res)=>{
+app.post("/login", async(req,res)=>{
+    console.log("aaya")
     const {email,pass}=req.body
     user.findOne({email: email}, (err,user)=> {
         if(user){
@@ -94,6 +95,20 @@ app.post('https://mern-project-xyzsor.herokuapp.com/login', async(req,res)=>{
         }
         else{
             res.send({message: "User not found"})
+        }
+    }).catch(err => {
+        console.log("yahii to hai",err);
+    })
+})
+
+
+app.get("/read", (req,res)=>{
+    user.find({},(err,result)=>{
+        if(err){
+            res.send(err);
+        }
+        else{
+            res.send(result);
         }
     })
 })
