@@ -50,7 +50,7 @@ const userSchema =  mongoose.Schema({
   const user = mongoose.model('User', userSchema);
 
   //POST API USER
-app.post('/signup', async (req, res) => { //
+app.post('https://mern-project-xyzsor.herokuapp.com/signup', async (req, res) => { //
      const {name, email, pass,age,ph,dob,gender}= req.body
     const data = new user({ //
         name: req.body.name,//
@@ -80,7 +80,7 @@ app.post('/signup', async (req, res) => { //
 })//
 
 // API
-app.post('/login', async(req,res)=>{
+app.post('https://mern-project-xyzsor.herokuapp.com/login', async(req,res)=>{
     const {email,pass}=req.body
     user.findOne({email: email}, (err,user)=> {
         if(user){
