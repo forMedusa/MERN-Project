@@ -14,6 +14,9 @@
     text-align: center;
     margin-top: 2%;
 }
+.Profiledata{
+    text-align: left;
+}
 .logoutbut{
     color: white;
     text-decoration: none;
@@ -31,5 +34,4 @@
     .Profiledata{
         text-align: left;
     }
-
     }

@@ -13,7 +13,7 @@ export default function Signup(){
         gender:"",
         age:0,
         ph:0,
-        dob:"dd/mm/yyyy"
+        dob:"2022-03-19"
     })
     let navigate = useNavigate();
     const valueChange = event => {

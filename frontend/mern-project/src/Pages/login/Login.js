@@ -11,7 +11,7 @@ export default function Login(){
         gender:"",
         age:0,
         ph:0,
-        dob:"dd/mm/yyyy"
+        dob:"2022-03-19"
     })
     let navigate = useNavigate();
     const valueChange = event => {
@@ -34,6 +34,7 @@ export default function Login(){
                 localStorage.setItem("age",res.data.user.age);
                 localStorage.setItem("dob",res.data.user.dob);
                 localStorage.setItem("ph",res.data.user.ph);
+                localStorage.setItem("id",res.data.user._id);
                 navigate("/Profile");
             }
             }).catch(err => {
