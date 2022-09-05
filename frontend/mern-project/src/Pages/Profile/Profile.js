@@ -33,9 +33,9 @@ export default function Profile() {
         console.log("aaya");
         axios.put("https://mern-project-xyzsor.herokuapp.com/update",user)
         .then(res => {
-            console.log(res);
+            // console.log(res);
         }).catch(err =>{
-            console.log("ye hai error", err)
+            // console.log("ye hai error", err)
         })
         if(user.gender==="Male" || user.gender==="male" || user.gender==="Female" || user.gender==="female"){
         localStorage.clear();
@@ -69,7 +69,6 @@ export default function Profile() {
     }
     return (
         <>
-            {console.log(user.dob)}
             <div className="head"><h1>Profile</h1></div>
             <div className="Profilecontainer">
 

@@ -25,7 +25,7 @@ export default function Login(){
         e.preventDefault();
         axios.post('https://mern-project-xyzsor.herokuapp.com/login', user)
         .then(res => {
-            console.log(res.data);
+            //console.log(res.data);
             alert(res.data.message)
             if(res.data.message==="Login Successful"){
                 localStorage.setItem("email", user.email);

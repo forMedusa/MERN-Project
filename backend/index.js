@@ -114,8 +114,8 @@ app.get("/read", (req,res)=>{
 })
 
 app.put("/update", async(req,res)=>{
-    const {email,age,name,id,dob,gender,number}=req.body
-    user.findByIdAndUpdate(id, {name: name, email: email, age: age, gender: gender, number: number,dob: dob}, (err, docs)=> {
+    const {email,age,name,id,dob,gender,ph}=req.body
+    user.findByIdAndUpdate(id, {name: name, email: email, age: age, gender: gender, ph: ph,dob: dob}, (err, docs)=> {
         res.send({message: "Updated User : ", docs})
         if (err){
             console.log(err)

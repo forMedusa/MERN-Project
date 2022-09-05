@@ -29,7 +29,7 @@ export default function Signup(){
         if(name && email && pass &&(pass===cpass)){
             axios.post("https://mern-project-xyzsor.herokuapp.com/signup", user)
             .then(res => {
-                console.log(res);
+                //console.log(res);
                 alert(res.data.message);
                 if(res.data.message==="Data Inserted in Database"){
                     navigate("/Profile");
